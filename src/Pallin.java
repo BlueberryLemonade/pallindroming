@@ -1,18 +1,27 @@
 public class Pallin {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+
 
         String test = "racecar";
-        Boolean isPallindrome = false;
-        Boolean finishedComparing = false;
+        Boolean isPallindrome = true;
+
         //string iteration for comparing for pallindrom
         int strIt = (int)test.length()/2;
 
         for(int i = 0; i<strIt; i++){
-            System.out.println(test.charAt(i));
-            System.out.println(test.charAt(test.length() -1 -i));
+            char first = test.charAt(i);
+            char last = test.charAt(test.length() -1 -i);
+
+            if(first != last){
+                isPallindrome = false;
+            }
         }
-        System.out.println(strIt);
+
+        if(isPallindrome){
+            System.out.println("Yes");
+        } else {
+            System.out.println("No");
+        }
 
     }
 }
